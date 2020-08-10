@@ -139,10 +139,10 @@
     },
     methods: {
       isActive(val) {
-        return this.specsS.includes(val);
+        return this.specsS.find((item) => item && item.id === val.id);
       },
       isOption(val) {
-        return this.optionSpecs.includes(val);
+        return this.optionSpecs.find((item) => item.id === val.id);
       },
       init() {
         this.adjoinArray = Array(this.len * this.len).fill(0)
